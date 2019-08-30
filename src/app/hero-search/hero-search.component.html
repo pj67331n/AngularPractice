@@ -1,0 +1,14 @@
+<div>
+  <label
+    >Hero name:
+    <input #name />
+  </label>
+  <button (click)="search(name.value); name.value = ''">
+    Search
+  </button>
+  <ul class="heroes">
+    <li *ngFor="let hero of heroes">
+      <span class="badge">{{ hero.id }}</span> {{ hero.name }}
+    </li>
+  </ul>
+</div>
